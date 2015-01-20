@@ -35,7 +35,7 @@ Add "static-precompile" to your INSTALLED_APPS setting like this::
 ```python
 INSTALLED_APPS = (
     ...
-    'static-precompile',
+    'static_precompile',
 )
 ```
 
@@ -47,7 +47,7 @@ Settings
 1) By default it uses `STATIC_ROOT` as CACHE_ROOT if it is defined in settings
 otherwise `PROJECT_ROOT` or `BASE_DIR` should be defined in settings.
 if none is the case or you want cusom path for CACHE_ROOT then define
-STATIC_PRECOMPILE_CACHE_ROOT in settings.py
+`STATIC_PRECOMPILE_CACHE_ROOT` in settings.py
 
 `STATIC_PRECOMPILE_CACHE_ROOT = ...`
 

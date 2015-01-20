@@ -108,7 +108,7 @@ class SassFinder(BaseFinder):
     return []
 
   def list(self, ignore_patterns):
-    for STATIC_PATH in settings.STATICFILES_DIRS:
+    for STATIC_PATH in django_settings.STATICFILES_DIRS:
       for root, dirs, files in os.walk(STATIC_PATH):
         for f in files:
           if f.endswith('.'+settings.SASS_EXTENSION):
