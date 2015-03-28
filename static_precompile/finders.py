@@ -100,7 +100,7 @@ class SassFinder(BaseFinder):
               command = ['sass', '-I', STATIC_PATH, '--cache-location',
                   safe_join(settings.CACHE_ROOT,'.sass-cache/')]+\
                   (['--compass'] if settings.USE_COMPASS else [])+\
-                  [source_path, cache_path]
+                  ['--sourcemap=none', source_path, cache_path]
               subprocess.call(command)
               if check:
                 return True
